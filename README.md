@@ -66,4 +66,13 @@ have to click on the “CLI” tab.
 - no shutdown // this command leaves the network open even after receiving and
 transmitting packets
 - We do this for every interface: g0/0/0; g0/0/1; g0/0/2
-- 
+
+After configuring all the ports, we can check by retyping the >show ip interface brief< again to
+see if the ports are assigned.
+
+After connecting all the devices with each other, our network should be sending and receiving
+packets from every device. All the connections should have green dots in the UI.
+If we want to test the connections, we can simulate sending PDU packets from one device to
+the other, using the message icon in the menu.
+
+Enjoy :-)
