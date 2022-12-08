@@ -18,7 +18,7 @@ find a list of the devices used in the network and their description.
 | Wireless Device| AccessPoint-PT     | 1    |
 | Router        | ISR-331      | 1   |
 
-table 1.0: Devices used in the network
+(Table 1.0: Devices used in the network)
 
 - We have to connect all devices with each other. We have to click on “Connections” and
 choose “Copper Straight Through”, because copper is a good conductor of electricity to
@@ -50,3 +50,20 @@ To understand the Ip Configuration better, table 1.1 will help with that.
 | LP 0 | 192.168.30.2      | 255.255.255.0  | 192.168.30.254 |
 | LP 1 |192.168.30.3  |255.255.255.0  | 192.168.30.254 |
 
+(Table 1.1: Ip Configuration on all host machines.)
+
+We can configure the IP in the “Desktop” tab, under “IP Configuration”.
+
+At this phase, all PCs in their network can communicate with each other, but not outside of it; for
+example, PC0 and PC1 can communicate with each other, but PC1 and PC3 cannot. For them
+to be able to communicate, we have to configure the Ethernet ports of the Router. To do this we
+have to click on the “CLI” tab.
+- enable // to enable connection with the router as an administrator
+- show ip interface brief // to see the active ports in our router
+- configure terminal // to start configuration through the terminal
+- interface [name of interface port] // to start configuring the chosen port
+- ip address [ip address subnet mask] // to activate the network of the port
+- no shutdown // this command leaves the network open even after receiving and
+transmitting packets
+- We do this for every interface: g0/0/0; g0/0/1; g0/0/2
+- 
